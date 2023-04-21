@@ -1,0 +1,207 @@
+
+body{
+    background: $color-bg;
+    line-height: 1.4;
+}
+
+.nav{
+    background: #000000CC;
+    position : fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+}
+
+.nav-container{
+    max-width: $container;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1{
+        a{
+            width: 120px;
+            height: 24px;
+            display: block;
+            @include replace-text("../img/logo_w_svg.svg"); 
+            margin-left: 10px;  
+        }
+    }
+    ul{
+        display:flex;
+        li{
+            a{
+                display: block;
+                font-size: $fz-m;
+                color: #fff;
+                font-family: $font-family;
+                padding: 18px;
+                text-align: center;
+                &:hover{
+                    border-bottom:solid 2px #fff;
+                    @include mobile(){
+                        border:0;
+                        background: #b7aea6;
+                    }
+                }
+            }
+        }
+
+        @include mobile(){
+            display: block;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            background: #000000CC;
+            overflow:hidden;
+            transform:translateY(-112px);
+            transition: 0.5s ease;
+            z-index: -10;
+            font-weight: 600;
+            &.open{
+                transform:translateY(112px);
+            }
+        }
+    }
+    .mobile-bar{
+        cursor: pointer;
+        color:#fff;
+        font-size: $fz-l;
+        padding-right: 15px;
+        display:none;
+        @include mobile(){
+            display: block;
+        }
+    }
+
+}
+
+.banner{
+    background-image: url(../img/header_desktop.png);
+    background-size: cover;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .frame{
+        margin: 0 auto;
+        background: #00000066;
+        h2{
+            font-size:$fz-sl;
+            color:#fff;
+            text-align: center;
+            margin: 30px 40px;
+        }
+        p{
+            font-size: $fz-m;
+            color:#fff;
+            text-align: center;
+            line-height: 20px;
+            margin: 30px;
+        }
+    }
+    @include mobile(){
+        background-image: url(../img/header_mobile.png);
+        span{
+            display: block;
+            text-align: center;
+        }
+    }
+}   
+
+.f-container{
+    max-width: $container;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile(){
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.footer-content{
+    width: 70%;
+    margin-right: 20px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    @include mobile(){
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.inform{
+    margin: 40px 0;
+    h3{
+        font-size: $fz-m;
+        color: $color-brown;
+        margin-bottom: 15px;
+    }
+    p{
+        font-size: $fz-s;
+        color: $color-brown;
+        padding-right: 50px;
+        line-height: $fz-m;
+    }
+}
+.contact{
+    margin: 40px 0;
+    h3{
+        font-size: $fz-m;
+        color: $color-brown;
+        margin-bottom: 15px;
+    }
+    li{
+        font-size: $fz-s;
+        line-height: $fz-m;
+        color: $color-brown;
+        list-style-type: circle
+    }
+    a{
+        font-size: $fz-s;
+        color: $color-brown;
+    }
+}
+.social-media{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h3{
+        a{
+            width: 243px;
+            height: 48px;
+            display: block;
+            @include replace-text("../img/logo_l_svg.svg");
+            margin-right: 10px;
+            background-size: contain;
+        }
+    }
+    ul{
+        display:flex;
+        li{
+            font-size:  $fz-sl;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+    }
+    @include mobile(){
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+.google-icon{
+    color: #DB4437
+}
+.twitter-icon{
+    color: #41ABE1;
+}
+.fb-icon{
+    color: #3A5795;
+}

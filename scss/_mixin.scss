@@ -1,0 +1,33 @@
+$font-family:"Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+
+$fz-sl: 36px;
+$fz-l: 24px;
+$fz-m: 20px;
+$fz-s: 18px;
+$fz-ss: 16px;
+$container: 1024px;
+
+$color-brown: #3D1101;
+$color-bg: #EFE9E7;
+$color-bg-lighter: #FAFAFAB3;
+$color-orange: #FF5E45;
+
+@mixin replace-text($url){
+    background-image: url($url);
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+};
+
+@mixin pad{
+    @media(max-width:912px){
+        @content
+    }
+};
+
+@mixin mobile{
+    @media(max-width:767px){
+        @content
+    }
+};

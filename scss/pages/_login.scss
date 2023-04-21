@@ -1,0 +1,76 @@
+.login-title{
+    img{
+        display: block;
+        margin: 50px auto 10px;
+    }
+    p{
+        font-size: $fz-m;
+        color: $color-brown;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+.login-form{
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #0000004D;
+    border-top: 3px solid $color-orange;
+    padding: 0 15px;
+    p{
+        font-size: $fz-s;
+        color: $color-brown;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        padding-top: 15px;
+    }
+    label{
+        display: block;
+        margin-top: 20px;
+        color: $color-brown;
+        font-size: $fz-ss;
+    }
+    .login-input-and-icon{
+        border: 0.5px solid #0000004D;
+        width: 100%;
+        margin-top: 5px;
+        background: #fff;
+        padding: 3px 5px;
+        margin-bottom: 5px;
+        input{
+            border: 0;
+            outline: 0;
+            width: 90%;
+        }
+        i{
+            color: $color-brown;
+        }
+    }
+    a{
+        font-size: $fz-ss +(-2);
+        color: $color-orange;
+    }
+    .login-btn{
+        margin-top: 30px;
+        padding-bottom: 15px;
+        text-align: center;
+        .login-btn-res{
+            width: 45%;
+            color: #fff;
+            font-size: $fz-ss+(-2);
+            background: #0000004D;
+            &:hover{
+                background:$color-brown
+            }
+        }
+        .login-btn-login{
+            @extend .login-btn-res;
+            background: $color-orange;
+            margin-left: 5%;
+            &:hover{
+                background:$color-brown
+            }
+        }
+    }
+    
+}
